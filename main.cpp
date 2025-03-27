@@ -28,8 +28,8 @@ int main()
 	cout <<"Soluzione PALU:" << x1_palu << endl;
 	cout <<"Soluzione QR:" << x1_qr << endl;
 	
-	Vector2d err_rel_palu1;
-    err_rel_palu1<<	(x1_palu-x_esatta).cwiseAbs().cwiseQuotient(x_esatta.cwiseAbs());
+	double err_rel_palu1;
+    err_rel_palu1<<	(x1_palu-x_esatta).norm()/(x_esatta.norm());
 	cout<<err_rel_palu1<<endl;
 
 
@@ -51,8 +51,8 @@ int main()
 	cout <<"Soluzione PALU:" << x2_palu << endl;
 	cout <<"Soluzione QR:" << x2_qr << endl;
 
-    Vector2d err_rel_palu2;
-    err_rel_palu2<<	(x2_palu-x_esatta).cwiseAbs().cwiseQuotient(x_esatta.cwiseAbs());
+    double err_rel_palu2;
+    err_rel_palu2<<	(x2_palu-x_esatta).norm()/(x_esatta.norm());
 	cout<<err_rel_palu2<<endl;
 	
 	Matrix2d A3;
@@ -74,7 +74,7 @@ int main()
 	cout <<"Soluzione QR:" << x3_qr << endl;
 
     Vector2d err_rel_palu3;
-    err_rel_palu3<<	(x3_palu-x_esatta).cwiseAbs().cwiseQuotient(x_esatta.cwiseAbs());
+    err_rel_palu3<<	(x3_palu-x_esatta).norm()/(x_esatta.norm());
 	cout<<err_rel_palu3<<endl;
 	
 
